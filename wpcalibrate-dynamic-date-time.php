@@ -3,7 +3,7 @@
  * Plugin Name:       WPCalibrate Dynamic Date & Time
  * Plugin URI:        https://wpcalibrate.com
  * Description:       Display dynamic dates and times anywhere on your WordPress site—landing pages, Elementor, Gutenberg, and shortcode-ready page builders—with site/visitor timezones, offsets, and live updating.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.0
  * Requires PHP:      8.2
  * Author:            WPCalibrate
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Plugin constants.
-define( 'WPCALIBRATE_DDT_VERSION', '1.0.0' );
+define( 'WPCALIBRATE_DDT_VERSION', '1.0.1' );
 define( 'WPCALIBRATE_DDT_FILE', __FILE__ );
 define( 'WPCALIBRATE_DDT_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WPCALIBRATE_DDT_URL', plugin_dir_url( __FILE__ ) );

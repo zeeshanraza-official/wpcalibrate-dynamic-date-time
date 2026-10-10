@@ -5,7 +5,7 @@ Tags: date, time, dynamic date, dynamic time, landing page, elementor, gutenberg
 Requires at least: 6.0
 Tested up to: 7.1.3
 Requires PHP: 8.2
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,6 +78,11 @@ The plugin strictly parses day offsets and rejects arbitrary or invalid expressi
 Yes. The plugin uses a single centralized update loop that efficiently refreshes all live elements on the page, avoiding duplicate timers or excessive DOM writes.
 
 == Changelog ==
+
+= 1.0.1 =
+* Fixed critical error on activation caused by autoloader filename mismatch for GitHubUpdater.
+* Added multi-candidate autoloader resolution and explicit bootstrap dependency loading.
+* Updated compatibility aliases for in-dashboard update handler.
 
 = 1.0.0 =
 * Initial public release.

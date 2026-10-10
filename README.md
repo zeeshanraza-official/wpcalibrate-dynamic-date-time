@@ -3,7 +3,7 @@
 [![WordPress Tested](https://img.shields.io/badge/WordPress-6.0--7.1.3-blue.svg)](https://wordpress.org)
 [![PHP Target](https://img.shields.io/badge/PHP-%3E%3D8.2-777bb4.svg)](https://php.net)
 [![License](https://img.shields.io/badge/License-GPL%202.0%2B-green.svg)](LICENSE)
-[![GitHub release](https://img.shields.io/badge/Release-1.0.0-orange.svg)](https://github.com/zeeshanraza-official/wpcalibrate-dynamic-date-time/releases)
+[![GitHub release](https://img.shields.io/badge/Release-1.0.1-orange.svg)](https://github.com/zeeshanraza-official/wpcalibrate-dynamic-date-time/releases)
 
 Display dynamic dates and times anywhere across your WordPress site—landing pages, promotional sales, sales funnels, Gutenberg content, Elementor pages, and any page builder supporting shortcodes.
 
@@ -211,6 +211,12 @@ Access plugin controls under **WPCalibrate** in your WordPress admin menu:
 ---
 
 ## 📋 Changelog
+
+### [1.0.1] - 2026-10-10
+- **Bug Fixes & Hardening:**
+  - Fixed fatal critical error on activation caused by autoloader filename mismatch for `GitHubUpdater`.
+  - Added robust multi-candidate autoloader resolution and explicit bootstrap dependency loading.
+  - Added compatibility aliases for in-dashboard GitHub update checker.
 
 ### [1.0.0] - 2026-10-10
 - **Initial Release:**
