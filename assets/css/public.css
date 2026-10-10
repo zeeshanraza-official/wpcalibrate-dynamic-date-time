@@ -1,0 +1,11 @@
+/**
+ * WPCalibrate Dynamic Date & Time Public CSS
+ */
+
+.wpcal-datetime {
+	display: inline;
+}
+
+.wpcal-live {
+	font-variant-numeric: tabular-nums;
+}

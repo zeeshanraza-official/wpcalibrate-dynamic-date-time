@@ -1,0 +1,19 @@
+/**
+ * Gutenberg Block Editor Preview CSS
+ */
+
+.wpcal-block-wrapper {
+	display: inline-block;
+	padding: 4px 8px;
+	border: 1px dashed #2271b1;
+	border-radius: 4px;
+	background: #f0f6fc;
+}
+
+.wpcal-editor-placeholder {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	color: #0a4b78;
+	font-size: 13px;
+}

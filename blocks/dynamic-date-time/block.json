@@ -1,0 +1,55 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wpcalibrate/dynamic-date-time",
+	"version": "1.0.0",
+	"title": "Dynamic Date & Time",
+	"category": "text",
+	"icon": "calendar-alt",
+	"description": "Display dynamic dates and times with site/visitor timezones, relative day offsets, presets, and live clocks.",
+	"keywords": [
+		"date",
+		"time",
+		"dynamic",
+		"wpcalibrate",
+		"clock"
+	],
+	"textdomain": "wpcalibrate-dynamic-date-time",
+	"attributes": {
+		"type": {
+			"type": "string",
+			"default": "date"
+		},
+		"format": {
+			"type": "string",
+			"default": ""
+		},
+		"timezone": {
+			"type": "string",
+			"default": "site"
+		},
+		"offset": {
+			"type": "string",
+			"default": ""
+		},
+		"live": {
+			"type": "boolean",
+			"default": false
+		},
+		"preset": {
+			"type": "string",
+			"default": ""
+		},
+		"className": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false,
+		"customClassName": true
+	},
+	"editorScript": "wpcalibrate-ddt-block-editor",
+	"editorStyle": "wpcalibrate-ddt-block-editor-style",
+	"render": "file:./render.php"
+}

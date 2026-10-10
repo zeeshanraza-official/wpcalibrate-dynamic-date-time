@@ -1,0 +1,69 @@
+# Copyright (C) 2026 WPCalibrate
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WPCalibrate Dynamic Date & Time 1.0.0\n"
+"Report-Msgid-Bugs-To: support@wpcalibrate.com\n"
+"POT-Creation-Date: 2026-10-10 10:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: WPCalibrate <support@wpcalibrate.com>\n"
+"Language-Team: WPCalibrate <support@wpcalibrate.com>\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: wpcalibrate-dynamic-date-time.php:80
+msgid "%1$s requires PHP %2$s or higher. Your server is running PHP %3$s. Please update PHP to activate and use this plugin."
+msgstr ""
+
+#: wpcalibrate-dynamic-date-time.php:97
+msgid "%1$s requires PHP %2$s or higher."
+msgstr ""
+
+#: admin/class-admin.php:62
+msgid "Settings"
+msgstr ""
+
+#: admin/class-admin.php:67
+msgid "Support"
+msgstr ""
+
+#: admin/class-menu.php:97
+msgid "WPCalibrate"
+msgstr ""
+
+#: admin/class-menu.php:108
+#: admin/class-menu.php:117
+#: admin/class-menu.php:127
+msgid "Dynamic Date & Time"
+msgstr ""
+
+#: admin/class-settings.php:165
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: includes/class-preset-repository.php:129
+msgid "Preset Name is required."
+msgstr ""
+
+#: includes/class-preset-repository.php:141
+msgid "Preset Slug must contain letters, numbers, or hyphens."
+msgstr ""
+
+#: includes/class-preset-repository.php:145
+msgid "The chosen slug is a reserved system identifier. Please choose another."
+msgstr ""
+
+#: includes/class-preset-repository.php:150
+msgid "A preset with this slug already exists. Slugs must be unique."
+msgstr ""
+
+#: includes/class-assets.php:93
+msgid "Copied to clipboard!"
+msgstr ""
+
+#: includes/class-assets.php:94
+msgid "Are you sure you want to delete this preset? This action cannot be undone."
+msgstr ""
