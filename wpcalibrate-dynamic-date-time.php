@@ -53,31 +53,27 @@ spl_autoload_register(
 		$parts          = explode( '\\', $relative_class );
 		$class_name     = array_pop( $parts );
 
-		// Convert ClassName to class-classname.php
-		$formatted_class_name = 'class-' . strtolower( (string) preg_replace( '/([a-z])([A-Z])/', '$1-$2', $class_name ) ) . '.php';
+		// Possible file name variations:
+		// 1. Strict kebab-case: GitHubUpdater -> class-git-hub-updater.php
+		$kebab_class = 'class-' . strtolower( (string) preg_replace( '/([a-z])([A-Z])/', '$1-$2', $class_name ) ) . '.php';
 
-		$sub_path = '';
-		if ( ! empty( $parts ) ) {
-			$sub_path = strtolower( implode( '/', $parts ) ) . '/';
-		}
+		// 2. Normalized without split (GitHub -> github): class-github-updater.php
+		$normalized_class = str_replace( 'git-hub', 'github', $kebab_class );
 
-		$file = WPCALIBRATE_DDT_DIR . 'includes/' . $sub_path . $formatted_class_name;
-		if ( file_exists( $file ) ) {
-			require_once $file;
-			return;
-		}
+		// 3. Simple lowercase hyphenated: class-githubupdater.php
+		$plain_class = 'class-' . strtolower( str_replace( '_', '-', $class_name ) ) . '.php';
 
-		// Check admin directory.
-		$admin_file = WPCALIBRATE_DDT_DIR . 'admin/' . $sub_path . $formatted_class_name;
-		if ( file_exists( $admin_file ) ) {
-			require_once $admin_file;
-			return;
-		}
+		$candidates = array_unique( [ $kebab_class, $normalized_class, $plain_class ] );
+		$directories = [ 'includes/', 'admin/', 'public/' ];
 
-		// Check public directory.
-		$public_file = WPCALIBRATE_DDT_DIR . 'public/' . $sub_path . $formatted_class_name;
-		if ( file_exists( $public_file ) ) {
-			require_once $public_file;
+		foreach ( $directories as $dir ) {
+			foreach ( $candidates as $candidate ) {
+				$file = WPCALIBRATE_DDT_DIR . $dir . $sub_path . $candidate;
+				if ( file_exists( $file ) ) {
+					require_once $file;
+					return;
+				}
+			}
 		}
 	}
 );
@@ -86,6 +82,7 @@ spl_autoload_register(
 require_once WPCALIBRATE_DDT_DIR . 'includes/class-activator.php';
 require_once WPCALIBRATE_DDT_DIR . 'includes/class-deactivator.php';
 require_once WPCALIBRATE_DDT_DIR . 'includes/class-plugin.php';
+require_once WPCALIBRATE_DDT_DIR . 'includes/class-git-hub-updater.php';
 
 /**
  * Check PHP compatibility before running.
